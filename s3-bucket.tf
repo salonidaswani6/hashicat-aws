@@ -9,4 +9,8 @@ module "s3_bucket" {
   bucket_prefix = "salonidaswani"
 #   policy = {   statement {     sid = "1"      actions = [       "s3:ListAllMyBuckets",       "s3:GetBucketLocation",     ]      resources = [       "arn:aws:s3:::*",     ]   }
   request_payer = "BucketOwner"
+  tags = {
+    "Department" = "My bucket"
+    "Billable" = "Dev"
+  }
 }
